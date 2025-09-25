@@ -1,0 +1,24 @@
+description: This file stores settings for Dart & Flutter DevTools.
+documentation: https://docs.flutter.dev/tools/devtools/extensions#configure-extension-enablement-states
+extensions:
+
+# Developer notes:
+# If DevTools opens automatically when you run the app, the behavior is controlled by your IDE
+# (VS Code or Android Studio) or by an explicit devtools/CLI command. To prevent automatic
+# opening, do the following in your IDE:
+#
+# VS Code (Dart/Flutter extension):
+# - Open Settings (File > Preferences > Settings) and search for "Dart: Open DevTools" or
+#   "dart.openDevTools". Disable the option to stop DevTools from opening automatically.
+# - Alternatively, open Command Palette (Ctrl+Shift+P) -> "Preferences: Open Settings (JSON)"
+#   and add:  "dart.openDevTools": false
+#
+# Android Studio/IntelliJ (Flutter plugin):
+# - Go to Settings > Languages & Frameworks > Flutter > DevTools and uncheck any
+#   "Open DevTools on app start" or similar option.
+#
+# Manual launch:
+# - VS Code: Use the "Dart: Open DevTools" command from the Command Palette when needed.
+# - Android Studio: Run "Open DevTools" from the Flutter inspector toolbar.
+# - CLI: `flutter pub global run devtools` then open the printed URL in your browser.
+
