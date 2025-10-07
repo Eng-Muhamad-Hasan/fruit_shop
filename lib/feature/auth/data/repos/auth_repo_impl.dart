@@ -1,11 +1,14 @@
+import 'dart:convert';
 import 'dart:developer';
 
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fruit_shop/core/constants/constants.dart';
 import 'package:fruit_shop/core/errors/exceptions.dart';
 import 'package:fruit_shop/core/errors/failures.dart';
 import 'package:fruit_shop/core/services/database_service.dart';
 import 'package:fruit_shop/core/services/firebase_auth_service.dart';
+import 'package:fruit_shop/core/services/shared_preferences_singleton.dart';
 import 'package:fruit_shop/core/utils/backend_endpoints.dart';
 import 'package:fruit_shop/feature/auth/data/model/user_model.dart';
 import 'package:fruit_shop/feature/auth/domain/entity/user_entity.dart';
@@ -59,6 +62,7 @@ class AuthRepoImpl extends AuthRepo {
         password: password,
       );
       final userEntity = await getUserData(uid: user.uid);
+      await saveUserData(user: userEntity);
       return right(userEntity);
     } on CustomExceptions catch (e) {
       return left(ServerFailure(e.message));
@@ -74,6 +78,7 @@ class AuthRepoImpl extends AuthRepo {
     try {
       user = await firebaseAuthService.signInWithGoogle();
       final userEntity = UserModel.fromFirebaseUser(user);
+        await saveUserData(user: userEntity);
       bool isUserExist = await databaseService.checkIsDataExist(
         path: BackendEndpoints.getUserData,
         documentId: user.uid,
@@ -100,7 +105,7 @@ class AuthRepoImpl extends AuthRepo {
   Future addUserData({required UserEntity user}) async {
     await databaseService.addData(
       path: BackendEndpoints.addUserData,
-      data: user.toMap(),
+      data: UserModel.fromEntity(user).toMap(),
       documentId: user.uid,
     );
   }
@@ -111,7 +116,14 @@ class AuthRepoImpl extends AuthRepo {
       path: BackendEndpoints.getUserData,
       documentId: uid,
     );
+
     return UserModel.fromMap(userData);
+  }
+
+  @override
+  Future saveUserData({required UserEntity user}) async {
+    var jsonData = jsonEncode(UserModel.fromEntity(user).toMap());
+    await Prefs.setString(kUserDataKey, jsonData);
   }
 
   // @override

@@ -51,7 +51,7 @@ class PageviewItem extends StatelessWidget {
                     padding: const EdgeInsets.all(16.0),
                     child: Text(
                       "تخطي",
-                      style: AppTextStyles.bodySmallRegular.copyWith(
+                      style: AppTextStyles.bodySmallRegular13.copyWith(
                         color: AppColors.gray400,
                       ),
                     ),

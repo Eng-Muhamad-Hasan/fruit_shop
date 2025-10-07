@@ -2,7 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_shop/core/constants/constants.dart';
-import 'package:fruit_shop/core/functions/build_log_snack_bar.dart';
+import 'package:fruit_shop/core/functions/show_log_snack_bar.dart';
 import 'package:fruit_shop/core/shared/custom_button.dart';
 import 'package:fruit_shop/core/shared/custom_text_form_field.dart';
 import 'package:fruit_shop/core/utils/app_colors.dart';
@@ -109,7 +109,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                       password,
                     );
                   } else {
-                    buildLogSnackBar(
+                    showLogSnackBar(
                       context,
                       "يجب الموافقة على الشروط و الأحكام",
                     );

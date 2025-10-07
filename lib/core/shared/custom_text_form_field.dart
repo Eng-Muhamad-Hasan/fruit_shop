@@ -25,11 +25,12 @@ class CustomTextFormField extends StatelessWidget {
         if (value == null || value.isEmpty) {
           return 'هذا الحقل مطلوب';
         }
+      
         return null;
       },
       onSaved: onSaved,
       decoration: InputDecoration(
-        hintStyle: AppTextStyles.bodyXSmallBold.copyWith(
+        hintStyle: AppTextStyles.bodyXSmallBold13.copyWith(
           color: AppColors.gray400,
         ),
         hintText: hintText,

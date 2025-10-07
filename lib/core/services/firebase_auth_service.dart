@@ -1,17 +1,16 @@
-import 'dart:developer';
 
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fruit_shop/core/constants/constants.dart';
 // import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:fruit_shop/core/errors/exceptions.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
+import '../utils/api_keys.dart';
+
 abstract class AuthService {}
 
 class FirebaseAuthService extends AuthService {
-  
   Future deleteUser() async {
-    await FirebaseAuth.instance.currentUser!.delete();
+    await FirebaseAuth.instance.currentUser?.delete();
   }
 
   Future<User> createUserWithEmailAndPassword({
@@ -23,9 +22,9 @@ class FirebaseAuthService extends AuthService {
           .createUserWithEmailAndPassword(email: email, password: password);
       return credential.user!;
     } on FirebaseAuthException catch (e) {
-      log(
-        'FirebaseAuthException in createUserWithEmailAndPassword: ${e.code} and ${e.message}',
-      );
+      // log(
+      //   'FirebaseAuthException in createUserWithEmailAndPassword: ${e.code} and ${e.message}',
+      // );
       if (e.code == 'weak-password') {
         throw CustomExceptions(
           'كلمة المرور ضعيفة جداً, يرجى اختيار كلمة مرور أقوى',
@@ -57,9 +56,9 @@ class FirebaseAuthService extends AuthService {
       );
       return credential.user!;
     } on FirebaseAuthException catch (e) {
-      log(
-        'FirebaseAuthException in signInWithEmailAndPassword: ${e.code} and ${e.message}',
-      );
+      // log(
+      //   'FirebaseAuthException in signInWithEmailAndPassword: ${e.code} and ${e.message}',
+      // );
       if (e.code == 'user-not-found') {
         throw CustomExceptions('لا يوجد مستخدم بهذا البريد الإلكتروني');
       } else if (e.code == 'wrong-password') {
@@ -98,6 +97,9 @@ class FirebaseAuthService extends AuthService {
     return (await FirebaseAuth.instance.signInWithCredential(credential)).user!;
   }
 
+  bool isLogIn() {
+    return FirebaseAuth.instance.currentUser != null;
+  }
   // Future<User> signInWithFacebook() async {
   //   // Trigger the sign-in flow
   //   final LoginResult loginResult = await FacebookAuth.instance.login();

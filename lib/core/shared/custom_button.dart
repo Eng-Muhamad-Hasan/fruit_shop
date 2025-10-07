@@ -23,7 +23,7 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadiusGeometry.circular(16),
           ),
         ),
-        child: Text(textButton,style: AppTextStyles.bodyBaseBold.copyWith(color: Colors.white),),
+        child: Text(textButton,style: AppTextStyles.bodyBaseBold16.copyWith(color: Colors.white),),
       ),
     );
   }

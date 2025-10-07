@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruit_shop/core/constants/constants.dart';
+import 'package:fruit_shop/core/services/firebase_auth_service.dart';
 import 'package:fruit_shop/core/services/shared_preferences_singleton.dart';
 import 'package:fruit_shop/core/utils/app_assets.dart';
 import 'package:fruit_shop/core/utils/app_colors.dart';
 import 'package:fruit_shop/core/utils/app_text_styles.dart';
 import 'package:fruit_shop/feature/auth/presentation/view/login_view.dart';
+import 'package:fruit_shop/feature/home/presentation/view/main_view.dart';
 import 'package:fruit_shop/feature/on_boarding/presentation/view/on_boarding_view.dart';
 import 'package:lottie/lottie.dart';
 
@@ -33,7 +35,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
     _fadeController = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 600),
+      duration: const Duration(milliseconds: 100),
     );
     _fadeAnimation = CurvedAnimation(
       parent: _fadeController,
@@ -73,10 +75,15 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   Future<void> _navigateNext() async {
-    final isOnBoardingViewed = await Prefs.getBool(kIsOnBoardingViewedKey);
+    final isOnBoardingViewed = Prefs.getBool(kIsOnBoardingViewedKey);
     if (!mounted) return;
-    if (isOnBoardingViewed) {
-      Navigator.pushReplacementNamed(context, LoginView.routeName);
+    if (isOnBoardingViewed!) {
+      final isLogIn = FirebaseAuthService().isLogIn();
+      if (isLogIn) {
+        Navigator.pushReplacementNamed(context, MainView.routeName);
+      } else {
+        Navigator.pushReplacementNamed(context, LoginView.routeName);
+      }
     } else {
       Navigator.pushReplacementNamed(context, OnBoardingView.routeName);
     }
@@ -105,8 +112,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     SizedBox(
-                      width: 250,
-                      height: 250,
+                      width: 300,
+                      height: 300,
                       child: RepaintBoundary(
                         child: Lottie.asset(
                           _lottieIndex == 0
@@ -119,19 +126,19 @@ class _SplashViewBodyState extends State<SplashViewBody>
                         ),
                       ),
                     ),
-            
+
                     Text.rich(
                       TextSpan(
                         children: [
                           TextSpan(
                             text: 'Fruit',
-                            style: AppTextStyles.heading1Regular.copyWith(
+                            style: AppTextStyles.heading1Regular48.copyWith(
                               color: AppColors.orange400,
                             ),
                           ),
                           TextSpan(
                             text: ' Shop',
-                            style: AppTextStyles.heading1Regular.copyWith(
+                            style: AppTextStyles.heading1Regular48.copyWith(
                               color: AppColors.lighterPrimaryColor,
                             ),
                           ),

@@ -11,11 +11,13 @@ import 'package:fruit_shop/feature/splash/presentation/view/splash_view.dart';
 import 'package:fruit_shop/firebase_options.dart';
 import 'package:fruit_shop/generated/l10n.dart';
 
+import 'feature/home/presentation/cubit/cart/cart_cubit.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Prefs.init();
   Bloc.observer = CustomBlocObserver();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  await Prefs.init();
   setupGetIt();
   runApp(const MyApp());
 }
@@ -26,24 +28,27 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        fontFamily: "Cairo",
-        appBarTheme: const AppBarTheme(backgroundColor: Colors.white),
-        scaffoldBackgroundColor: Colors.white,
-        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
+    return BlocProvider(
+      create: (context) => CartCubit(),
+      child: MaterialApp(
+        theme: ThemeData(
+          fontFamily: "Cairo",
+          appBarTheme: const AppBarTheme(backgroundColor: Colors.white),
+          scaffoldBackgroundColor: Colors.white,
+          colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
+        ),
+        localizationsDelegates: const [
+          S.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: S.delegate.supportedLocales,
+        locale: const Locale('ar'),
+        debugShowCheckedModeBanner: false,
+        onGenerateRoute: onGenerateRoute,
+        initialRoute: SplashView.routeName,
       ),
-      localizationsDelegates: const [
-        S.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: S.delegate.supportedLocales,
-      locale: const Locale('ar'),
-      debugShowCheckedModeBanner: false,
-      onGenerateRoute: onGenerateRoute,
-      initialRoute: SplashView.routeName,
     );
   }
 }

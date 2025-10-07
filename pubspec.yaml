@@ -48,6 +48,10 @@ dependencies:
   lottie: ^3.3.2
   google_sign_in: ^7.2.0
   cloud_firestore: ^6.0.2
+  skeletonizer: ^2.1.0+1
+  cached_network_image: ^3.4.1
+  provider: ^6.1.5+1
+  flutter_paypal_payment: ^1.0.8
   # flutter_facebook_auth: ^7.1.2
 
 dev_dependencies:
@@ -104,7 +108,7 @@ flutter:
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
-  image_path: "assets/images/app_icon.png"
+  image_path: "assets/images/app-icon.png"
   min_sdk_android: 21 # android min sdk min:16, default 21
 
 flutter_assets:
