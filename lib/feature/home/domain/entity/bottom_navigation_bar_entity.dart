@@ -28,6 +28,11 @@ List<BottomNavigationBarEntity> get getBottomNavigationBarEntityList {
       inActiveImage: Assets.imagesCartOut,
     ),
     const BottomNavigationBarEntity(
+      name: 'مساعد ذكي',
+      activeImage: Assets.imagesStarsFill,
+      inActiveImage: Assets.imagesStarsOut,
+    ),
+    const BottomNavigationBarEntity(
       name: 'حسابي',
       activeImage: Assets.imagesUserFill,
       inActiveImage: Assets.imagesUserOut,

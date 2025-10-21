@@ -42,6 +42,10 @@ class Assets {
 
   static const String imagesLangOption = "assets/images/lang_option.svg";
 
+  static const String imagesLeafFill = "assets/images/leaf-fill.svg";
+
+  static const String imagesLeafOut = "assets/images/leaf-out.svg";
+
   static const String imagesLocation = "assets/images/location.svg";
 
   static const String imagesLogOut = "assets/images/log_out.svg";
@@ -49,6 +53,10 @@ class Assets {
   static const String imagesLogo = "assets/images/logo.svg";
 
   static const String imagesLotus = "assets/images/lotus.svg";
+
+  static const String imagesMessageGreen = "assets/images/message-green.svg";
+
+  static const String imagesMessageOrange = "assets/images/message-orange.svg";
 
   static const String imagesMyOrders = "assets/images/my_orders.svg";
 
@@ -83,6 +91,10 @@ class Assets {
   static const String imagesReviewStar = "assets/images/review_star.svg";
 
   static const String imagesSearchIcon = "assets/images/search_icon.svg";
+
+  static const String imagesStarsFill = "assets/images/stars-fill.svg";
+
+  static const String imagesStarsOut = "assets/images/stars-out.svg";
 
   static const String imagesThemeOption = "assets/images/theme_option.svg";
 

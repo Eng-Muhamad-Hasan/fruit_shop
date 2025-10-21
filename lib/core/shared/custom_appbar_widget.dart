@@ -10,8 +10,12 @@ AppBar buildAppBar(
   bool backButton = true,
 }) {
   return AppBar(
+    surfaceTintColor: Colors.white,
     centerTitle: true,
-    title: Text(title, style: AppTextStyles.bodyLargeBold19.copyWith(color: AppColors.gray950)),
+    title: Text(
+      title,
+      style: AppTextStyles.bodyLargeBold19.copyWith(color: AppColors.gray950),
+    ),
     leading: Visibility(
       visible: backButton,
       child: IconButton(
