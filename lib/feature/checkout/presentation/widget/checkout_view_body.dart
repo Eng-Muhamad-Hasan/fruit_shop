@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_shop/Feature/checkout/domain/entity/order_entity.dart';
 import 'package:fruit_shop/core/functions/show_log_snack_bar.dart';
 import 'package:fruit_shop/core/shared/custom_button.dart';
-import 'package:fruit_shop/feature/checkout/domain/entity/order_entity.dart';
-import 'package:fruit_shop/feature/checkout/presentation/widget/checkout_address/address_section.dart';
-import 'package:fruit_shop/feature/checkout/presentation/widget/checkout_payment/payment_section.dart';
-import 'package:fruit_shop/feature/checkout/presentation/widget/checkout_shipping/shipping_section.dart';
-import 'package:fruit_shop/feature/checkout/presentation/widget/checkout_steps/checkout_steps.dart';
+import 'package:fruit_shop/Feature/checkout/presentation/widget/checkout_address/address_section.dart';
+import 'package:fruit_shop/Feature/checkout/presentation/widget/checkout_payment/payment_section.dart';
+import 'package:fruit_shop/Feature/checkout/presentation/widget/checkout_shipping/shipping_section.dart';
+import 'package:fruit_shop/Feature/checkout/presentation/widget/checkout_steps/checkout_steps.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../core/constants/constants.dart';

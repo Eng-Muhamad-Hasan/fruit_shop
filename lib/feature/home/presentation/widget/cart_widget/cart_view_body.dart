@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_shop/core/shared/custom_appbar_widget.dart';
 import 'package:fruit_shop/core/utils/app_colors.dart';
 import 'package:fruit_shop/core/utils/app_text_styles.dart';
-import 'package:fruit_shop/feature/home/presentation/cubit/cart/cart_cubit.dart';
+import 'package:fruit_shop/Feature/home/presentation/cubit/cart/cart_cubit.dart';
 
 import 'cart_items_list.dart';
 import 'custom_cart_button.dart';

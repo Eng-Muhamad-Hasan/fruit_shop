@@ -50,6 +50,7 @@ ProductEntity toEntity() => ProductEntity(
   ratingCount: ratingCount,
   numberOfCalories: numberOfCalories,
   caloriesAmountUnit: caloriesAmountUnit,
+  sellingCount: sellingCount,
   reviews: reviews.map((e) => e.toEntity()).toList(),
 );
 

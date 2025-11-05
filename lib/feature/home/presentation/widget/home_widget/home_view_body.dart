@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_shop/core/cubit/products/products_cubit.dart';
-import 'package:fruit_shop/feature/home/presentation/widget/home_widget/custom_home_appbar.dart';
-import 'package:fruit_shop/feature/home/presentation/widget/home_widget/featured_items_list.dart';
-import 'package:fruit_shop/feature/home/presentation/widget/home_widget/top_selling_header.dart';
+import 'package:fruit_shop/Feature/home/presentation/widget/home_widget/custom_home_appbar.dart';
+import 'package:fruit_shop/Feature/home/presentation/widget/home_widget/featured_items_list.dart';
+import 'package:fruit_shop/Feature/home/presentation/widget/home_widget/top_selling_header.dart';
 
 import '../../../../../core/constants/constants.dart';
 import '../../../../../core/shared/custom_search_field.dart';

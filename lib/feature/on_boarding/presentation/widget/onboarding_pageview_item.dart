@@ -4,7 +4,7 @@ import 'package:fruit_shop/core/constants/constants.dart';
 import 'package:fruit_shop/core/services/shared_preferences_singleton.dart';
 import 'package:fruit_shop/core/utils/app_colors.dart';
 import 'package:fruit_shop/core/utils/app_text_styles.dart';
-import 'package:fruit_shop/feature/auth/presentation/view/login_view.dart';
+import 'package:fruit_shop/Feature/auth/presentation/view/login_view.dart';
 
 class PageviewItem extends StatelessWidget {
   const PageviewItem({

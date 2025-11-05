@@ -1,4 +1,4 @@
-import '../../../feature/home/domain/entity/cart_item_entity.dart';
+import '../../../Feature/home/domain/entity/cart_item_entity.dart';
 import 'items_entity.dart';
 
 class ItemListEntity {

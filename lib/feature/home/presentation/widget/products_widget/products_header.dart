@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruit_shop/core/cubit/products/products_cubit.dart';
+import 'package:fruit_shop/core/functions/show_filter_bottom_sheet.dart';
 import 'package:fruit_shop/core/utils/app_colors.dart';
 import 'package:fruit_shop/core/utils/app_text_styles.dart';
-import 'package:fruit_shop/feature/best_selling/presentation/view/best_selling_view.dart';
 
 import '../../../../../core/utils/app_assets.dart';
 
@@ -36,10 +36,11 @@ class ProductsHeader extends StatelessWidget {
               ),
             ),
             const Spacer(),
-            GestureDetector(
-              onTap: () =>
-                  Navigator.of(context).pushNamed(BestSellingView.routeName),
-              child: SvgPicture.asset(Assets.imagesProductsFilter),
+            IconButton(
+              onPressed: () {
+                showFilterBottomSheet(context);
+              },
+              icon: SvgPicture.asset(Assets.imagesProductsFilter),
             ),
           ],
         );

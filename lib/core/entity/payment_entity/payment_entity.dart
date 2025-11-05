@@ -1,5 +1,5 @@
 
-import '../../../feature/checkout/domain/entity/order_entity.dart';
+import '../../../Feature/checkout/domain/entity/order_entity.dart';
 import 'amount_entity.dart';
 import 'item_list_entity.dart';
 

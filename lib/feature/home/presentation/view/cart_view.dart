@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruit_shop/feature/home/presentation/cubit/cart_item/cart_item_cubit.dart';
-import 'package:fruit_shop/feature/home/presentation/widget/cart_widget/cart_view_body.dart';
+import 'package:fruit_shop/Feature/home/presentation/cubit/cart_item/cart_item_cubit.dart';
+import 'package:fruit_shop/Feature/home/presentation/widget/cart_widget/cart_view_body.dart';
 
 
 class CartView extends StatelessWidget {

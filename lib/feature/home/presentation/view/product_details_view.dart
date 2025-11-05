@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:fruit_shop/feature/home/domain/entity/cart_item_entity.dart';
+import 'package:fruit_shop/Feature/home/domain/entity/cart_item_entity.dart';
+import 'package:fruit_shop/Feature/home/presentation/widget/product_details_widget/product_details_body.dart';
 
-import '../widget/product_details_widget/product_details_body.dart';
 
 class ProductDetailsView extends StatefulWidget {
   const ProductDetailsView({super.key, required this.cartItemEntity});

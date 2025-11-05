@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_shop/feature/ai_chat/presentation/view/ai_chat_view.dart';
-import 'package:fruit_shop/feature/home/presentation/view/profile_view.dart';
+import 'package:fruit_shop/Feature/ai_chat/presentation/view/ai_chat_view.dart';
+import 'package:fruit_shop/Feature/home/presentation/view/profile_view.dart';
 
 import '../view/cart_view.dart';
 import '../view/home_view.dart';

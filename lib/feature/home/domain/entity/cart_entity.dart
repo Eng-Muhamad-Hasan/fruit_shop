@@ -1,6 +1,6 @@
 import 'package:fruit_shop/core/entity/product_entity.dart';
 
-import 'package:fruit_shop/feature/home/domain/entity/cart_item_entity.dart';
+import 'package:fruit_shop/Feature/home/domain/entity/cart_item_entity.dart';
 
 class CartEntity {
   final List<CartItemEntity> cartItems;

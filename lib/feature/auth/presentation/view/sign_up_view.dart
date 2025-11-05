@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart' show BlocProvider;
 import 'package:fruit_shop/core/services/get_it_service.dart';
 import 'package:fruit_shop/core/shared/custom_appbar_widget.dart';
-import 'package:fruit_shop/feature/auth/domain/repos/auth_repo.dart';
-import 'package:fruit_shop/feature/auth/presentation/cubit/sign_up/sign_up_cubit.dart';
-import 'package:fruit_shop/feature/auth/presentation/widget/sign_up_view_body_consumer.dart';
+import 'package:fruit_shop/Feature/auth/domain/repos/auth_repo.dart';
+import 'package:fruit_shop/Feature/auth/presentation/cubit/sign_up/sign_up_cubit.dart';
+import 'package:fruit_shop/Feature/auth/presentation/widget/sign_up_view_body_consumer.dart';
 
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});

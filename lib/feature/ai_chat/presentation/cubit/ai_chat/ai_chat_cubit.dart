@@ -6,7 +6,6 @@ import '../../../../../core/utils/api_keys.dart';
 
 part 'ai_chat_state.dart';
 
-
 abstract class ChatSessionAdapter {
   List<String> get historyTexts;
 

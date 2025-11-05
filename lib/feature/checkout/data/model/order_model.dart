@@ -1,4 +1,4 @@
-import 'package:fruit_shop/feature/checkout/data/model/order_product_model.dart';
+import 'package:fruit_shop/Feature/checkout/data/model/order_product_model.dart';
 
 import '../../domain/entity/order_entity.dart';
 import 'shipping_address_model.dart';

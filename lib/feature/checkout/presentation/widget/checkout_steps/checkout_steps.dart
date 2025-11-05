@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruit_shop/feature/checkout/presentation/widget/checkout_steps/step_item.dart';
+import 'package:fruit_shop/Feature/checkout/presentation/widget/checkout_steps/step_item.dart';
 
 import '../../../../../core/functions/show_log_snack_bar.dart';
 import '../../../domain/entity/order_entity.dart';

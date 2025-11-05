@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruit_shop/feature/checkout/domain/entity/order_entity.dart';
+import 'package:fruit_shop/Feature/checkout/domain/entity/order_entity.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';

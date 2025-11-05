@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruit_shop/core/utils/app_assets.dart';
-import 'package:fruit_shop/feature/checkout/domain/entity/order_entity.dart';
+import 'package:fruit_shop/Feature/checkout/domain/entity/order_entity.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../../core/utils/app_colors.dart';

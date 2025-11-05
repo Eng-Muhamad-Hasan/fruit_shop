@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruit_shop/core/errors/exceptions.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-import '../utils/api_keys.dart';
+import '../../utils/api_keys.dart';
 
 abstract class AuthService {}
 

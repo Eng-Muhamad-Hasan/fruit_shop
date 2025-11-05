@@ -228,9 +228,8 @@ class ProductDetailsBody extends StatelessWidget {
                       svgImage: Assets.imagesFlame,
                     ),
                     ProductDetailsCard(
-                      title: 'مراجعات',
-                      subtitle:
-                          '${cartItemEntity.productEntity.reviews.length} ',
+                      title: 'المبيعات',
+                      subtitle: '${cartItemEntity.productEntity.sellingCount} ',
                       svgImage: Assets.imagesReviewStar,
                     ),
                   ],

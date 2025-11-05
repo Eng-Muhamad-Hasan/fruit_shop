@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_shop/feature/auth/presentation/view/login_view.dart';
-import 'package:fruit_shop/feature/auth/presentation/view/sign_up_view.dart';
-import 'package:fruit_shop/feature/best_selling/presentation/view/best_selling_view.dart';
-import 'package:fruit_shop/feature/checkout/presentation/view/checkout_view.dart';
-import 'package:fruit_shop/feature/home/domain/entity/cart_entity.dart';
-import 'package:fruit_shop/feature/home/domain/entity/cart_item_entity.dart';
-import 'package:fruit_shop/feature/home/presentation/view/cart_view.dart';
-import 'package:fruit_shop/feature/home/presentation/view/main_view.dart';
-import 'package:fruit_shop/feature/on_boarding/presentation/view/on_boarding_view.dart';
-import 'package:fruit_shop/feature/splash/presentation/view/splash_view.dart';
+import 'package:fruit_shop/Feature/auth/presentation/view/login_view.dart';
+import 'package:fruit_shop/Feature/auth/presentation/view/sign_up_view.dart';
+import 'package:fruit_shop/Feature/best_selling/presentation/view/best_selling_view.dart';
+import 'package:fruit_shop/Feature/checkout/presentation/view/checkout_view.dart';
+import 'package:fruit_shop/Feature/home/domain/entity/cart_entity.dart';
+import 'package:fruit_shop/Feature/home/domain/entity/cart_item_entity.dart';
+import 'package:fruit_shop/Feature/home/presentation/view/cart_view.dart';
+import 'package:fruit_shop/Feature/home/presentation/view/main_view.dart';
+import 'package:fruit_shop/Feature/on_boarding/presentation/view/on_boarding_view.dart';
+import 'package:fruit_shop/Feature/splash/presentation/view/splash_view.dart';
 
-import '../../feature/home/presentation/view/product_details_view.dart';
-import '../../feature/home/presentation/view/products_view.dart';
+import '../../Feature/home/presentation/view/product_details_view.dart';
+import '../../Feature/home/presentation/view/products_view.dart';
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {

@@ -1,5 +1,4 @@
-import 'package:fruit_shop/feature/home/domain/entity/cart_entity.dart';
-import 'package:fruit_shop/feature/home/domain/entity/cart_item_entity.dart';
+import 'package:fruit_shop/Feature/home/domain/entity/cart_entity.dart';
 
 import 'shipping_address_entity.dart';
 
@@ -16,11 +15,7 @@ class OrderEntity {
     required this.uid,
   });
 
-  void addSellingCount() {
-    for (CartItemEntity cartItem in cartEntity.cartItems) {
-      cartItem.productEntity.sellingCount ++;
-    }
-  }
+ 
 
   double calculateShippingCost() {
     if (payWithCash!) {

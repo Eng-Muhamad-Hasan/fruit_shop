@@ -7,9 +7,9 @@ import 'package:fruit_shop/core/shared/custom_button.dart';
 import 'package:fruit_shop/core/shared/custom_text_form_field.dart';
 import 'package:fruit_shop/core/utils/app_colors.dart';
 import 'package:fruit_shop/core/utils/app_text_styles.dart';
-import 'package:fruit_shop/feature/auth/presentation/cubit/sign_up/sign_up_cubit.dart';
-import 'package:fruit_shop/feature/auth/presentation/widget/custom_checlbox.dart';
-import 'package:fruit_shop/feature/auth/presentation/widget/custom_password_field.dart';
+import 'package:fruit_shop/Feature/auth/presentation/cubit/sign_up/sign_up_cubit.dart';
+import 'package:fruit_shop/Feature/auth/presentation/widget/custom_checlbox.dart';
+import 'package:fruit_shop/Feature/auth/presentation/widget/custom_password_field.dart';
 
 class SignUpViewBody extends StatefulWidget {
   const SignUpViewBody({super.key});

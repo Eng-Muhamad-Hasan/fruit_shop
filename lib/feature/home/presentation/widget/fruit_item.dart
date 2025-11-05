@@ -5,9 +5,9 @@ import 'package:flutter_svg/svg.dart';
 import 'package:fruit_shop/core/entity/product_entity.dart';
 import 'package:fruit_shop/core/utils/app_colors.dart';
 import 'package:fruit_shop/core/utils/app_text_styles.dart';
-import 'package:fruit_shop/feature/home/domain/entity/cart_item_entity.dart';
-import 'package:fruit_shop/feature/home/presentation/cubit/cart/cart_cubit.dart';
-import 'package:fruit_shop/feature/home/presentation/view/product_details_view.dart';
+import 'package:fruit_shop/Feature/home/domain/entity/cart_item_entity.dart';
+import 'package:fruit_shop/Feature/home/presentation/cubit/cart/cart_cubit.dart';
+import 'package:fruit_shop/Feature/home/presentation/view/product_details_view.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
 import '../../../../core/utils/app_assets.dart';

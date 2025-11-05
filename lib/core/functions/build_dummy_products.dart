@@ -14,7 +14,7 @@ ProductEntity buildDummyProducts() {
     reviews: const [],
     isOrganic: false,
     ratingAvg: 22,
-    ratingCount: 12,
+    ratingCount: 12,sellingCount: 0
   );
   return product;
 }

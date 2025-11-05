@@ -1,6 +1,6 @@
 import 'package:fruit_shop/core/constants/constants.dart';
 
-import '../../../feature/home/domain/entity/cart_item_entity.dart';
+import '../../../Feature/home/domain/entity/cart_item_entity.dart';
 
 class ItemsEntity {
   String? name;

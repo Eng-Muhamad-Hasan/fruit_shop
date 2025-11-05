@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_shop/feature/home/domain/entity/bottom_navigation_bar_entity.dart';
+import 'package:fruit_shop/Feature/home/domain/entity/bottom_navigation_bar_entity.dart';
 import 'bottom_navigation_bar_item.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {

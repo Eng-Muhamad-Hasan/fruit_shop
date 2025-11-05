@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_shop/core/shared/bottom_navigation_bar/active_navigation_bar_item.dart';
 import 'package:fruit_shop/core/shared/bottom_navigation_bar/inactive_bottom_navigation_bar_item.dart';
-import 'package:fruit_shop/feature/home/domain/entity/bottom_navigation_bar_entity.dart';
+import 'package:fruit_shop/Feature/home/domain/entity/bottom_navigation_bar_entity.dart';
 
 class NavigationBarItem extends StatelessWidget {
   const NavigationBarItem({

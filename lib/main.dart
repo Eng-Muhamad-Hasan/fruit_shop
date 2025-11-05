@@ -7,11 +7,11 @@ import 'package:fruit_shop/core/services/bloc_observer.dart';
 import 'package:fruit_shop/core/services/get_it_service.dart';
 import 'package:fruit_shop/core/services/shared_preferences_singleton.dart';
 import 'package:fruit_shop/core/utils/app_colors.dart';
-import 'package:fruit_shop/feature/splash/presentation/view/splash_view.dart';
+import 'package:fruit_shop/Feature/splash/presentation/view/splash_view.dart';
 import 'package:fruit_shop/firebase_options.dart';
 import 'package:fruit_shop/generated/l10n.dart';
 
-import 'feature/home/presentation/cubit/cart/cart_cubit.dart';
+import 'Feature/home/presentation/cubit/cart/cart_cubit.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

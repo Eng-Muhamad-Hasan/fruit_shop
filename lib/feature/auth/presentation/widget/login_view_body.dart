@@ -6,12 +6,12 @@ import 'package:fruit_shop/core/constants/constants.dart';
 import 'package:fruit_shop/core/shared/custom_button.dart';
 import 'package:fruit_shop/core/shared/custom_text_form_field.dart';
 import 'package:fruit_shop/core/utils/app_assets.dart';
-import 'package:fruit_shop/feature/auth/presentation/cubit/login/login_cubit.dart';
-import 'package:fruit_shop/feature/auth/presentation/widget/custom_password_field.dart';
-import 'package:fruit_shop/feature/auth/presentation/widget/dont_have_account_widget.dart';
-import 'package:fruit_shop/feature/auth/presentation/widget/forget_password_widget.dart';
-import 'package:fruit_shop/feature/auth/presentation/widget/or_divider_widget.dart';
-import 'package:fruit_shop/feature/auth/presentation/widget/social_login_button.dart';
+import 'package:fruit_shop/Feature/auth/presentation/cubit/login/login_cubit.dart';
+import 'package:fruit_shop/Feature/auth/presentation/widget/custom_password_field.dart';
+import 'package:fruit_shop/Feature/auth/presentation/widget/dont_have_account_widget.dart';
+import 'package:fruit_shop/Feature/auth/presentation/widget/forget_password_widget.dart';
+import 'package:fruit_shop/Feature/auth/presentation/widget/or_divider_widget.dart';
+import 'package:fruit_shop/Feature/auth/presentation/widget/social_login_button.dart';
 
 class LoginViewBody extends StatefulWidget {
   const LoginViewBody({super.key});

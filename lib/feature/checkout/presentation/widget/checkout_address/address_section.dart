@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_shop/core/shared/custom_text_form_field.dart';
-import 'package:fruit_shop/feature/checkout/domain/entity/order_entity.dart';
+import 'package:fruit_shop/Feature/checkout/domain/entity/order_entity.dart';
 import 'package:provider/provider.dart';
 
 class AddressSection extends StatefulWidget {

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruit_shop/core/constants/constants.dart';
-import 'package:fruit_shop/core/services/firebase_auth_service.dart';
+import 'package:fruit_shop/core/services/firebase/firebase_auth_service.dart';
 import 'package:fruit_shop/core/services/shared_preferences_singleton.dart';
 import 'package:fruit_shop/core/utils/app_assets.dart';
 import 'package:fruit_shop/core/utils/app_colors.dart';
 import 'package:fruit_shop/core/utils/app_text_styles.dart';
-import 'package:fruit_shop/feature/auth/presentation/view/login_view.dart';
-import 'package:fruit_shop/feature/home/presentation/view/main_view.dart';
-import 'package:fruit_shop/feature/on_boarding/presentation/view/on_boarding_view.dart';
+import 'package:fruit_shop/Feature/auth/presentation/view/login_view.dart';
+import 'package:fruit_shop/Feature/home/presentation/view/main_view.dart';
+import 'package:fruit_shop/Feature/on_boarding/presentation/view/on_boarding_view.dart';
 import 'package:lottie/lottie.dart';
 
 class SplashViewBody extends StatefulWidget {

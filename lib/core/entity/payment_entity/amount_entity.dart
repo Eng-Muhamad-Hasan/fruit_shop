@@ -1,6 +1,6 @@
 
 import 'package:fruit_shop/core/constants/constants.dart';
-import 'package:fruit_shop/feature/checkout/domain/entity/order_entity.dart';
+import 'package:fruit_shop/Feature/checkout/domain/entity/order_entity.dart';
 
 import 'details_entity.dart';
 

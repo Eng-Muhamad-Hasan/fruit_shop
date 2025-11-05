@@ -4,11 +4,11 @@ import 'package:fruit_shop/core/functions/fetch_user_data.dart';
 import 'package:fruit_shop/core/functions/show_log_snack_bar.dart';
 import 'package:fruit_shop/core/shared/custom_appbar_widget.dart';
 import 'package:fruit_shop/core/shared/custom_progress_indicator.dart';
-import 'package:fruit_shop/feature/checkout/domain/entity/order_entity.dart';
-import 'package:fruit_shop/feature/checkout/domain/entity/shipping_address_entity.dart';
-import 'package:fruit_shop/feature/checkout/presentation/cubit/order/order_cubit.dart';
-import 'package:fruit_shop/feature/home/domain/entity/cart_entity.dart';
-import 'package:fruit_shop/feature/home/presentation/cubit/cart/cart_cubit.dart';
+import 'package:fruit_shop/Feature/checkout/domain/entity/order_entity.dart';
+import 'package:fruit_shop/Feature/checkout/domain/entity/shipping_address_entity.dart';
+import 'package:fruit_shop/Feature/checkout/presentation/cubit/order/order_cubit.dart';
+import 'package:fruit_shop/Feature/home/domain/entity/cart_entity.dart';
+import 'package:fruit_shop/Feature/home/presentation/cubit/cart/cart_cubit.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../core/repos/orders_repo/orders_repo.dart';

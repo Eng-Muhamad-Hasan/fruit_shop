@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:fruit_shop/feature/ai_chat/presentation/cubit/ai_chat/ai_chat_cubit.dart';
+import 'package:fruit_shop/Feature/ai_chat/presentation/cubit/ai_chat/ai_chat_cubit.dart';
 
 class _FakeAdapter implements ChatSessionAdapter {
   _FakeAdapter({List<String>? initial}) : _history = initial ?? [];

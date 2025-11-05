@@ -7,12 +7,12 @@ import 'package:fruit_shop/core/constants/constants.dart';
 import 'package:fruit_shop/core/errors/exceptions.dart';
 import 'package:fruit_shop/core/errors/failures.dart';
 import 'package:fruit_shop/core/services/database_service.dart';
-import 'package:fruit_shop/core/services/firebase_auth_service.dart';
+import 'package:fruit_shop/core/services/firebase/firebase_auth_service.dart';
 import 'package:fruit_shop/core/services/shared_preferences_singleton.dart';
 import 'package:fruit_shop/core/utils/backend_endpoints.dart';
-import 'package:fruit_shop/feature/auth/data/model/user_model.dart';
-import 'package:fruit_shop/feature/auth/domain/entity/user_entity.dart';
-import 'package:fruit_shop/feature/auth/domain/repos/auth_repo.dart';
+import 'package:fruit_shop/Feature/auth/data/model/user_model.dart';
+import 'package:fruit_shop/Feature/auth/domain/entity/user_entity.dart';
+import 'package:fruit_shop/Feature/auth/domain/repos/auth_repo.dart';
 
 class AuthRepoImpl extends AuthRepo {
   final FirebaseAuthService firebaseAuthService;

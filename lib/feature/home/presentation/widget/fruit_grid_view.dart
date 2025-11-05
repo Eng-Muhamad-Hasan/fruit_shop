@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_shop/core/entity/product_entity.dart';
-import 'package:fruit_shop/feature/home/presentation/widget/fruit_item.dart';
+import 'package:fruit_shop/Feature/home/presentation/widget/fruit_item.dart';
 
 class FruitGridView extends StatelessWidget {
   const FruitGridView({super.key, required this.products});

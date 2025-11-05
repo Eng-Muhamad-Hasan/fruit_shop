@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruit_shop/core/utils/app_assets.dart';
 import 'package:fruit_shop/core/utils/app_colors.dart';
 import 'package:fruit_shop/core/utils/app_text_styles.dart';
-import 'package:fruit_shop/feature/on_boarding/presentation/widget/onboarding_pageview_item.dart';
+import 'package:fruit_shop/Feature/on_boarding/presentation/widget/onboarding_pageview_item.dart';
 
 enum TransitionIntensity { subtle, normal, strong }
 

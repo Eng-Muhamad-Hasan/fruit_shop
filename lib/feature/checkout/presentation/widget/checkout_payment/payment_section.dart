@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruit_shop/feature/checkout/presentation/widget/checkout_payment/address_card.dart';
+import 'package:fruit_shop/Feature/checkout/presentation/widget/checkout_payment/address_card.dart';
 
 
 import '../../../domain/entity/order_entity.dart';

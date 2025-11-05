@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fruit_shop/core/functions/show_log_snack_bar.dart';
 import 'package:fruit_shop/core/shared/custom_appbar_widget.dart';
 
 import '../../../../core/utils/app_assets.dart';
@@ -41,9 +42,7 @@ class _AiChatViewBodyState extends State<AiChatViewBody> {
       listener: (context, state) {
         if (state is AiChatLoaded) _scrollToEnd();
         if (state is AiChatLoaded && state.error != null) {
-          ScaffoldMessenger.of(
-            context,
-          ).showSnackBar(SnackBar(content: Text(state.error!)));
+          showLogSnackBar(context, state.error.toString());
         }
       },
       builder: (context, state) {

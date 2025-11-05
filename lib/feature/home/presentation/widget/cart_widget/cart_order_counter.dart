@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_shop/core/utils/app_colors.dart';
 import 'package:fruit_shop/core/utils/app_text_styles.dart';
-import 'package:fruit_shop/feature/home/domain/entity/cart_item_entity.dart';
-import 'package:fruit_shop/feature/home/presentation/cubit/cart_item/cart_item_cubit.dart';
+import 'package:fruit_shop/Feature/home/domain/entity/cart_item_entity.dart';
+import 'package:fruit_shop/Feature/home/presentation/cubit/cart_item/cart_item_cubit.dart';
 
 class CartOrderCounter extends StatelessWidget {
   const CartOrderCounter({super.key, required this.cartItemEntity});

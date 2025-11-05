@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_paypal_payment/flutter_paypal_payment.dart';
 import 'package:fruit_shop/core/entity/payment_entity/payment_entity.dart';
 import 'package:fruit_shop/core/functions/show_log_snack_bar.dart';
-import 'package:fruit_shop/feature/checkout/domain/entity/order_entity.dart';
+import 'package:fruit_shop/Feature/checkout/domain/entity/order_entity.dart';
 
-import '../../feature/checkout/presentation/cubit/order/order_cubit.dart';
+import '../../Feature/checkout/presentation/cubit/order/order_cubit.dart';
 
 void paymentProcess(BuildContext context) {
   final orderEntity = context.read<OrderEntity>();

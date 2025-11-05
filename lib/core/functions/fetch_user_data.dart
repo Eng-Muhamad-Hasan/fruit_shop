@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:fruit_shop/core/constants/constants.dart';
 import 'package:fruit_shop/core/services/shared_preferences_singleton.dart';
-import 'package:fruit_shop/feature/auth/data/model/user_model.dart';
-import 'package:fruit_shop/feature/auth/domain/entity/user_entity.dart';
+import 'package:fruit_shop/Feature/auth/data/model/user_model.dart';
+import 'package:fruit_shop/Feature/auth/domain/entity/user_entity.dart';
 
 UserEntity getUser() {
   final String? userData = Prefs.getString(kUserDataKey);
