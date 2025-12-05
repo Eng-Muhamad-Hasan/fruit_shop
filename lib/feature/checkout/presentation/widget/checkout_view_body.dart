@@ -6,6 +6,7 @@ import 'package:fruit_shop/Feature/checkout/presentation/widget/checkout_address
 import 'package:fruit_shop/Feature/checkout/presentation/widget/checkout_payment/payment_section.dart';
 import 'package:fruit_shop/Feature/checkout/presentation/widget/checkout_shipping/shipping_section.dart';
 import 'package:fruit_shop/Feature/checkout/presentation/widget/checkout_steps/checkout_steps.dart';
+import 'package:fruit_shop/generated/l10n.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../core/constants/constants.dart';
@@ -16,7 +17,7 @@ class CheckoutViewBody extends StatefulWidget {
   const CheckoutViewBody({super.key});
 
   @override
-  State<CheckoutViewBody> createState() => _CheckoutViewBodyState();
+  State<CheckoutViewBody>  createState() => _CheckoutViewBodyState();
 }
 
 class _CheckoutViewBodyState extends State<CheckoutViewBody> {
@@ -132,16 +133,16 @@ class _CheckoutViewBodyState extends State<CheckoutViewBody> {
   String getButtonTitle(int currentPage) {
     switch (currentPage) {
       case 0:
-        return 'التالي';
+        return S.of(context).checkout_button_next;
       case 1:
-        return 'تأكيد العنوان';
+        return S.of(context).checkout_button_address;
       case 2:
         return context.read<OrderEntity>().payWithCash!
-            ? 'تأكيد الطلب'
-            : 'الدفع عبر باي-بال';
+            ? S.of(context).checkout_button_order
+            : S.of(context).checkout_button_payment_with_paypal;
 
       default:
-        return 'التالي';
+        return S.of(context).checkout_button_next;
     }
   }
 }

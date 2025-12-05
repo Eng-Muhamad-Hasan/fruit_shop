@@ -22,7 +22,7 @@ class FruitItem extends StatelessWidget {
         Navigator.pushNamed(
           context,
           ProductDetailsView.routeName,
-          arguments: CartItemEntity(productEntity: product),
+          arguments: CartItemEntity(productEntity: product)
         );
       },
       child: Container(

@@ -9,17 +9,14 @@ class ActiveItem extends StatelessWidget {
   final String text;
   @override
   Widget build(BuildContext context) {
-    // Keep a fixed height and minimum width so AnimatedSwitcher doesn't cause
-    // the child to overflow the parent when switching between active/inactive
-    // states. The outer Center + SizedBox ensures stable layout bounds.
+
     return Center(
       child: SizedBox(
         height: 30,
-        // min width to accommodate icon + text without changing layout
-        // during switches. This preserves sizing while AnimatedSwitcher
-        // cross-fades children.
+       
         child: Container(
-          padding: const EdgeInsets.only(left: 16),
+      
+          padding: const EdgeInsetsDirectional.only(end: 16),
           constraints: const BoxConstraints(minWidth: 80),
           decoration: ShapeDecoration(
             color: const Color(0xFFEEEEEE),

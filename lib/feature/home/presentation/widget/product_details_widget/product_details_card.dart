@@ -32,18 +32,22 @@ class ProductDetailsCard extends StatelessWidget {
             child: Column(
               spacing: 4,
               children: [
-                Text(
-                  title,
-                  textAlign: TextAlign.right,
-                  style: AppTextStyles.bodyBaseBold16.copyWith(
-                    color: const Color(0xFF23AA49),
+                FittedBox(
+                  child: Text(
+                    title,
+                    textAlign: TextAlign.right,
+                    style: AppTextStyles.bodyBaseBold16.copyWith(
+                      color: const Color(0xFF23AA49),
+                    ),
                   ),
                 ),
-                Text(
-                  subtitle,
-                  textAlign: TextAlign.right,
-                  style: AppTextStyles.bodySemiBold13.copyWith(
-                    color: const Color(0xFF969899),
+                FittedBox(
+                  child: Text(
+                    subtitle,
+                    textAlign: TextAlign.right,
+                    style: AppTextStyles.bodySemiBold13.copyWith(
+                      color: const Color(0xFF969899),
+                    ),
                   ),
                 ),
               ],

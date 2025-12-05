@@ -9,6 +9,7 @@ import 'package:fruit_shop/Feature/checkout/domain/entity/shipping_address_entit
 import 'package:fruit_shop/Feature/checkout/presentation/cubit/order/order_cubit.dart';
 import 'package:fruit_shop/Feature/home/domain/entity/cart_entity.dart';
 import 'package:fruit_shop/Feature/home/presentation/cubit/cart/cart_cubit.dart';
+import 'package:fruit_shop/generated/l10n.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../core/repos/orders_repo/orders_repo.dart';
@@ -21,7 +22,7 @@ class CheckoutView extends StatefulWidget {
   final CartEntity cartEntity;
 
   @override
-  State<CheckoutView> createState() => _CheckoutViewState();
+  State<CheckoutView>  createState() => _CheckoutViewState();
 }
 
 class _CheckoutViewState extends State<CheckoutView> {
@@ -42,7 +43,7 @@ class _CheckoutViewState extends State<CheckoutView> {
     return BlocProvider(
       create: (context) => OrdersCubit(getIt<OrdersRepo>()),
       child: Scaffold(
-        appBar: buildAppBar(context, title: 'الشحن'),
+        appBar: buildAppBar(context, title: S.of(context).checkout_title),
 
         body: SafeArea(
           child: Provider.value(

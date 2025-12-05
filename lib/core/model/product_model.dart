@@ -78,7 +78,7 @@ ProductEntity toEntity() => ProductEntity(
     );
   }
 
-  toJson() {
+  Map<String, Object?> toJson() {
     return {
       'name': name,
       'price': price,

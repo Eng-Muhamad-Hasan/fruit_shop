@@ -38,7 +38,7 @@ class OrderModel {
     );
   }
 
-  toJson() {
+  Map<String, dynamic> toJson() {
     return {
       "uid": uid,
       "totalPrice": totalPrice,

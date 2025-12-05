@@ -57,6 +57,7 @@ class FireStoreService implements DatabaseService {
       //return all docs data from a collection as a List<Map<String, dynamic>>
       Query<Map<String, dynamic>> data = firebaseFirestore.collection(path);
       if (query != null) {
+       
         // support orderBy + limit
         if (query["orderBy"] != null && query["limit"] != null) {
           String orderByField = query["orderBy"].toString();
@@ -68,7 +69,15 @@ class FireStoreService implements DatabaseService {
               .get();
           return result.docs.map((e) => e.data()).toList();
         }
-
+        // support orderBy
+       else if (query["orderBy"] != null) {
+          String orderByField = query["orderBy"].toString();
+          bool descending = query["descending"] ?? false;
+          final result = await data
+              .orderBy(orderByField, descending: descending)
+              .get();
+          return result.docs.map((e) => e.data()).toList();
+        }
         // support where filter: { 'whereField': 'code', 'whereValue': 'P001' }
         if (query["whereField"] != null && query["whereValue"] != null) {
           final whereField = query["whereField"].toString();

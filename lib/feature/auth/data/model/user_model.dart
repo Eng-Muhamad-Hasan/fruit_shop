@@ -24,7 +24,7 @@ class UserModel extends UserEntity {
       uid: json['uid'],
     );
   }
-  toMap() {
+  Map<String, String> toMap() {
     return {'email': email, 'name': name, 'uid': uid};
   }
 }

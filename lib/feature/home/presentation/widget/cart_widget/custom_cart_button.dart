@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_shop/core/functions/show_log_snack_bar.dart';
+import 'package:fruit_shop/generated/l10n.dart';
 
 import '../../../../../core/shared/custom_button.dart';
 import '../../../../checkout/presentation/view/checkout_view.dart';
@@ -17,14 +18,20 @@ class CustomCartButton extends StatelessWidget {
         return CustomButton(
           onPressed: () {
             if (context.read<CartCubit>().cartEntity.cartItems.isNotEmpty) {
-              Navigator.of(context).pushNamed(CheckoutView.routeName,arguments: context.read<CartCubit>().cartEntity);
+              Navigator.of(context).pushNamed(
+                CheckoutView.routeName,
+                arguments: context.read<CartCubit>().cartEntity,
+              );
             } else {
               showLogSnackBar(context, 'لا توجد منتجات في السلة !');
             }
           },
 
-          textButton:
-              'الدفع ${context.watch<CartCubit>().cartEntity.getTotalCartPrice()} دولار',
+          textButton: S
+              .of(context)
+              .cart_pay_button(
+                context.watch<CartCubit>().cartEntity.getTotalCartPrice(),
+              ),
         );
       },
     );

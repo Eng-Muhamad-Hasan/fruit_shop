@@ -16,7 +16,7 @@ class ChatMessagesList extends StatefulWidget {
   final bool isTyping;
 
   @override
-  State<ChatMessagesList> createState() => _ChatMessagesListState();
+  State<ChatMessagesList>  createState() => _ChatMessagesListState();
 }
 
 class _ChatMessagesListState extends State<ChatMessagesList> {

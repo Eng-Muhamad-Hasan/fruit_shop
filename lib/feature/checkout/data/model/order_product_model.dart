@@ -24,7 +24,7 @@ class OrderProductModel {
       quantity: cartItemEntity.count,
     );
   }
-  toJson() {
+  Map<String, Object> toJson() {
     return {
       "name": name,
       "code": code,

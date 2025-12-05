@@ -7,6 +7,7 @@ class Prefs {
   static Future<void> init() async {
     _instance = await SharedPreferences.getInstance();
     _initialized = true;
+    
   }
 
   // Set a boolean value. Returns true if the operation succeeded.

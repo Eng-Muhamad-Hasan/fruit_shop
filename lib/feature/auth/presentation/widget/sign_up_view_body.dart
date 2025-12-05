@@ -15,7 +15,7 @@ class SignUpViewBody extends StatefulWidget {
   const SignUpViewBody({super.key});
 
   @override
-  State<SignUpViewBody> createState() => _SignUpViewBodyState();
+  State<SignUpViewBody>  createState() => _SignUpViewBodyState();
 }
 
 class _SignUpViewBodyState extends State<SignUpViewBody> {

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_shop/core/shared/custom_text_form_field.dart';
 import 'package:fruit_shop/core/utils/app_colors.dart';
+
 class CustomPasswordField extends StatefulWidget {
   const CustomPasswordField({super.key, required this.onSaved});
   final void Function(String?) onSaved;
 
   @override
-  State<CustomPasswordField> createState() => _CustomPasswordFieldState();
+  State<CustomPasswordField>  createState() => _CustomPasswordFieldState();
 }
 
 class _CustomPasswordFieldState extends State<CustomPasswordField> {

@@ -11,7 +11,7 @@ class OnboardingViewBody extends StatefulWidget {
   const OnboardingViewBody({super.key});
 
   @override
-  State<OnboardingViewBody> createState() => _OnboardingViewBodyState();
+  State<OnboardingViewBody>  createState() => _OnboardingViewBodyState();
 }
 
 class _OnboardingViewBodyState extends State<OnboardingViewBody> {

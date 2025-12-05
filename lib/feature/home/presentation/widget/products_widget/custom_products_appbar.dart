@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruit_shop/core/utils/app_colors.dart';
 import 'package:fruit_shop/core/utils/app_text_styles.dart';
+import 'package:fruit_shop/generated/l10n.dart';
 
 import '../../../../../core/utils/app_assets.dart';
 
@@ -15,7 +16,7 @@ class CustomProductsAppbar extends StatelessWidget {
       children: [
         const Spacer(),
         Text(
-          'المنتجات',
+         S.of(context).products_title,
           style: AppTextStyles.bodyLargeBold19.copyWith(
             color: AppColors.gray950,
           ),

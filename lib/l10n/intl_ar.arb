@@ -1,1 +1,82 @@
-{}
+{
+"home_navigation_bar":"الرئيسية",
+"products_navigation_bar":"المنتجات",
+"cart_navigation_bar":"السلة",
+"profile_navigation_bar":"حسابي",
+"ai_assistant_navigation_bar":"مساعد ذكي",
+
+"add_to_cart_button":"اضف إلى السلة",
+"shop_now_button":"تسوق الآن",
+
+"kilogram":"كيلوغرام",
+"dollar":"دولار",
+"months":"أشهر",
+
+"review_button":"المراجعة",
+"organic":"أورغانيك",
+ "expiration":"الصلاحية",
+"sellings":"المبيعات",
+"calory":"كالوري",
+
+"home_search_hint":"ابحث عن ..."
+,"home_most_selling":"الأكثر مبيعاً"
+,"home_more_button":"المزيد",
+
+"products_title":"المنتجات",
+"products_results":"نتائج",
+
+"cart_title":"السلة",
+"cart_pay_button":"ادفع {price} دولار",
+"cart_products_count" : "لديك {count} منتجات في سلة التسوق",
+
+"ai_chat_title":"المساعد الذكي",
+"ai_chat_hint":"اكتب رسالتك هنا ...",
+
+"filter_sort_by":"الترتيب حسب :",
+"filter_alphabet":"أبجدية",
+"filter_price_ascending":"السعر (تصاعدياً)",
+"filter_price_descending":"السعر (تنازلياً)",
+"filter_button":"تصفية",
+
+"checkout_title":"الشحن",
+"checkout_shipping_method":"الشحن",
+"checkout_address":"العنوان",
+"checkout_payment":"الدفع",
+
+"checkout_shipping_with_cash":" الدفع عند الاستلام",
+"checkout_shipping_online":"الدفع اونلاين",
+"checkout_shipping_with_cash_subtitle":"التسليم من المكان \n مع قيمة التوصيل : 2 ",
+"checkout_shipping_online_subtitle":"يرجي تحديد طريقه الدفع",
+
+"checkout_address_field_name":"الاسم الكامل",
+"checkout_address_field_email":"البريد الالكتروني",
+"checkout_address_field_city":"المدينة",
+"checkout_address_field_address":"العنوان",
+"checkout_address_field_address_details":"اسم الشارع,رقم الشقة , رقم الطابق ..",
+"checkout_address_field_phone":"رقم الهاتف",
+
+"checkout_payment_summary":"ملخص الطلب :",
+"checkout_payment_address":"عنوان التوصيل :",
+"checkout_payment_total":"الكلي",
+"checkout_payment_total_subtitle":"المجموع الفرعي :",
+"checkout_payment_delivery_cost":"التوصيل :",
+"checkout_payment_edit_button":"تعديل",
+
+"checkout_button_next":"التالي",
+"checkout_button_address":"تأكيد العنوان",
+"checkout_button_order":"تأكيد الطلب",
+"checkout_button_payment_with_paypal":"الدفع عبر باي-بال",
+
+"profile_title": "حسابي",
+"profile_header_section":"عام"
+,"profile_personal_file":"الملف الشخصي"
+,"profile_my_orders":"طلباتي"
+,"profile_my_payments":"المدفوعات"
+,"profile_my_favorites":"المفضلة"
+,"profile_my_notifications":"الإشعارات"
+,"profile_language":"اللغة"
+,"profile_select_language":"اختر اللغة"
+,"profile_theme":"المظهر"
+,"profile_about_us":"من نحن ؟"
+,"profile_help":"المساعدة","profile_log_out_button":"تسجيل الخروج"
+}

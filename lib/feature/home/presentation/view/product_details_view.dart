@@ -3,14 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:fruit_shop/Feature/home/domain/entity/cart_item_entity.dart';
 import 'package:fruit_shop/Feature/home/presentation/widget/product_details_widget/product_details_body.dart';
 
-
 class ProductDetailsView extends StatefulWidget {
   const ProductDetailsView({super.key, required this.cartItemEntity});
   static const String routeName = 'product_details';
   final CartItemEntity cartItemEntity;
-
   @override
-  State<ProductDetailsView> createState() => _ProductDetailsViewState();
+  State<StatefulWidget> createState() => _ProductDetailsViewState();
 }
 
 class _ProductDetailsViewState extends State<ProductDetailsView> {

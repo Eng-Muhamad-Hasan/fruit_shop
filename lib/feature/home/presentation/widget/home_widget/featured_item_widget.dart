@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fruit_shop/Feature/home/presentation/cubit/profile-cubit/change_language_cubit.dart';
+import 'package:fruit_shop/core/constants/constants.dart';
+import 'package:fruit_shop/core/services/shared_preferences_singleton.dart';
 import 'package:fruit_shop/core/utils/app_assets.dart';
 import 'package:fruit_shop/core/utils/app_colors.dart';
 import 'package:fruit_shop/core/utils/app_text_styles.dart';
+import 'package:fruit_shop/generated/l10n.dart';
 
 class FeaturedItemWidget extends StatelessWidget {
   const FeaturedItemWidget({super.key});
@@ -16,12 +21,25 @@ class FeaturedItemWidget extends StatelessWidget {
         aspectRatio: 342 / 158,
         child: Stack(
           children: [
-            Positioned(
-              left: 0,
-              bottom: 0,
-              top: 0,
-              right: kWidth * .4,
-              child: SvgPicture.asset(Assets.imagesPageViewItem1Image, fit: BoxFit.contain),
+            BlocBuilder<ChangeLanguageCubit, Locale>(
+              buildWhen: (previous, current) =>
+                  previous.languageCode != current.languageCode,
+              builder: (context, state) {
+                return Positioned.directional(
+                  end: 0,
+                  bottom: 0,
+                  top: 0,
+                  start: kWidth * .4,
+                  textDirection: Prefs.getString(kAppLanguageKey) == "ar"
+                      ? TextDirection.rtl
+                      : TextDirection.ltr,
+
+                  child: SvgPicture.asset(
+                    Assets.imagesPageViewItem1Image,
+                    fit: BoxFit.contain,
+                  ),
+                );
+              },
             ),
 
             Container(
@@ -66,7 +84,7 @@ class FeaturedItemWidget extends StatelessWidget {
                     ),
 
                     child: Text(
-                      'تسوق الان',
+                      S.of(context).shop_now_button,
                       textAlign: TextAlign.center,
                       style: AppTextStyles.bodyXSmallBold13.copyWith(
                         color: AppColors.green1_500,

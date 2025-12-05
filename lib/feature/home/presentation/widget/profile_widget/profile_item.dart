@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fruit_shop/core/constants/constants.dart';
+import 'package:fruit_shop/core/services/shared_preferences_singleton.dart';
 import 'package:fruit_shop/core/utils/app_text_styles.dart';
 
 import '../../../../../core/utils/app_colors.dart';
@@ -11,15 +13,17 @@ class ProfileItem extends StatelessWidget {
     this.isSwitch = false,
     required this.title,
     required this.svgIcon,
+    this.onTap,
   });
   final bool isText;
   final bool isSwitch;
   final String title;
   final String svgIcon;
+  final VoidCallback? onTap;
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         padding: const EdgeInsets.all(8),
 
@@ -40,9 +44,9 @@ class ProfileItem extends StatelessWidget {
             Visibility(
               visible: isText,
 
-              child: const Text(
-                'العربية',
-                style: TextStyle(
+              child: Text(
+                Prefs.getString(kAppLanguageKey) ?? "",
+                style: const TextStyle(
                   color: Color(0xFF0C0D0D) /* Grayscale-950 */,
                   fontSize: 13,
                   fontFamily: 'Cairo',

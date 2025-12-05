@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruit_shop/core/cubit/products/products_cubit.dart';
+import 'package:fruit_shop/Feature/home/presentation/cubit/home_cubit/home_cubit.dart';
 import 'package:fruit_shop/Feature/home/presentation/widget/home_widget/custom_home_appbar.dart';
 import 'package:fruit_shop/Feature/home/presentation/widget/home_widget/featured_items_list.dart';
 import 'package:fruit_shop/Feature/home/presentation/widget/home_widget/top_selling_header.dart';
@@ -13,13 +13,13 @@ class HomeViewBody extends StatefulWidget {
   const HomeViewBody({super.key});
 
   @override
-  State<HomeViewBody> createState() => _HomeViewBodyState();
+  State<HomeViewBody>  createState() => _HomeViewBodyState();
 }
 
 class _HomeViewBodyState extends State<HomeViewBody> {
   @override
   void initState() {
-    context.read<ProductsCubit>().getBestSellingProducts();
+    context.read<HomeCubit>().getBestSellingProducts();
     super.initState();
   }
 
@@ -50,4 +50,3 @@ class _HomeViewBodyState extends State<HomeViewBody> {
     );
   }
 }
-

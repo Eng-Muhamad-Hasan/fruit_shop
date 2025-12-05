@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_shop/Feature/checkout/presentation/widget/checkout_steps/step_item.dart';
+import 'package:fruit_shop/generated/l10n.dart';
 
 import '../../../../../core/functions/show_log_snack_bar.dart';
 import '../../../domain/entity/order_entity.dart';
@@ -17,6 +18,11 @@ class CheckoutSteps extends StatelessWidget {
   final ValueNotifier<AutovalidateMode> autoValidateNotifier;
   @override
   Widget build(BuildContext context) {
+    List<String> stepTitles = [
+      S.of(context).checkout_shipping_method,
+      S.of(context).checkout_address,
+      S.of(context).checkout_payment,
+    ];
     return Row(
       children: List.generate(
         3,
@@ -71,5 +77,3 @@ class CheckoutSteps extends StatelessWidget {
     }
   }
 }
-
-List<String> stepTitles = ['الشحن', 'العنوان', 'الدفع'];

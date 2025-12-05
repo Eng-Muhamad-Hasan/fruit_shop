@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruit_shop/core/utils/app_assets.dart';
 import 'package:fruit_shop/Feature/checkout/domain/entity/order_entity.dart';
+import 'package:fruit_shop/generated/l10n.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../../core/utils/app_colors.dart';
@@ -39,7 +40,7 @@ class AddressCard extends StatelessWidget {
             curve: Curves.easeInOutCubicEmphasized,
           ),
           child: Text(
-            'تعديل',
+           S.of(context).checkout_payment_edit_button,
             style: AppTextStyles.bodySemiBold13.copyWith(
               color: AppColors.gray400,
             ),

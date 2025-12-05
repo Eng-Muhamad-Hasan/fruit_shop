@@ -3,12 +3,13 @@ import 'package:fruit_shop/core/utils/app_assets.dart';
 import 'package:fruit_shop/core/utils/app_colors.dart';
 import 'package:fruit_shop/core/utils/app_text_styles.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fruit_shop/generated/l10n.dart';
 
 class CustomSearchField extends StatefulWidget {
   const CustomSearchField({super.key});
 
   @override
-  State<CustomSearchField> createState() => _CustomSearchFieldState();
+  State<CustomSearchField>  createState()=> _CustomSearchFieldState();
 }
 
 class _CustomSearchFieldState extends State<CustomSearchField> {
@@ -59,7 +60,7 @@ class _CustomSearchFieldState extends State<CustomSearchField> {
             child: SvgPicture.asset(Assets.imagesSearchIcon),
           ),
           hint: Text(
-            'ابحث عن.......',
+            S.of(context).home_search_hint,
             style: AppTextStyles.bodySmallRegular13.copyWith(
               color: AppColors.gray400,
             ),

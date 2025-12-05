@@ -1,1 +1,90 @@
-{}
+{
+"home_navigation_bar":"Home"
+,"products_navigation_bar":"Products"
+,"cart_navigation_bar":"Cart"
+,"profile_navigation_bar":"Profile"
+,"ai_assistant_navigation_bar":"AI Assistant"
+,
+
+"add_to_cart_button":"Add to Cart",
+"shop_now_button":"Shop Now",
+
+"kilogram":"Kilogram",
+"dollar":"Dollar",
+"months":"Months",
+
+"review_button":"Review",
+"organic":"Organic",
+ "expiration":"Expiration",
+"sellings":"Sellings",
+"calory":"Calory",
+
+"home_search_hint":"Search ..."
+,"home_most_selling":"Most Selling"
+,"home_more_button":"More"
+
+
+,
+"products_title":"Products",
+"products_results":"Results",
+
+"cart_title":"Cart",
+"cart_pay_button":"Pay {price} dollars",
+"cart_products_count" : "you have {count} products in shopping cart",
+
+"ai_chat_title":"Intelligent Assistant",
+"ai_chat_hint":"Write your message here ...",
+
+"filter_sort_by":"Sort By :",
+"filter_alphabet":"Alphabet",
+"filter_price_ascending":"Price (Ascending)",
+"filter_price_descending":"Price (Descending)",
+"filter_button":"Filter",
+
+"checkout_title":"Checkout",
+"checkout_shipping_method":"Shipping",
+"checkout_address":"Address",
+"checkout_payment":"Payment",
+
+"checkout_shipping_with_cash":" Payment with Cash",
+"checkout_shipping_online":"Payment Online",
+"checkout_shipping_with_cash_subtitle":"Delivery from the location \n with delivery cost: 2 ",
+"checkout_shipping_online_subtitle":"Please select the payment method",
+
+"checkout_address_field_name":"Full Name",
+"checkout_address_field_email":"Email",
+"checkout_address_field_city":"City",
+"checkout_address_field_address":"Address",
+"checkout_address_field_address_details":"Street Name,Postal Code , Building Number ..",
+"checkout_address_field_phone":"Phone",
+
+"checkout_payment_summary":"Order Summary :",
+"checkout_payment_address":"Delivery Address :",
+"checkout_payment_total":"Total",
+"checkout_payment_total_subtitle":"Total Amount :",
+"checkout_payment_delivery_cost":"Delivery :",
+"checkout_payment_edit_button":"Edit",
+
+"checkout_button_next":"Next",
+"checkout_button_address":"Confirm Address",
+"checkout_button_order":"Confirm Order",
+"checkout_button_payment_with_paypal":"Payment with Paypal",
+
+
+"profile_title": "Profile"
+,"profile_header_section":"General"
+,"profile_personal_file":"Personal File"
+,"profile_my_orders":"My Orders"
+,"profile_my_payments":"My Payments"
+,"profile_my_favorites":"My Favorites"
+,"profile_my_notifications":"My Notifications"
+,"profile_language":"Language"
+,"profile_select_language":"Select Language"
+,"profile_theme":"Theme"
+,"profile_about_us":"About Us"
+,"profile_help":"Help","profile_log_out_button":"Log Out"
+
+
+}
+
+

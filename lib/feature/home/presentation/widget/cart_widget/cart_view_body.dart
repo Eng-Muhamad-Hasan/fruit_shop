@@ -5,6 +5,7 @@ import 'package:fruit_shop/core/shared/custom_appbar_widget.dart';
 import 'package:fruit_shop/core/utils/app_colors.dart';
 import 'package:fruit_shop/core/utils/app_text_styles.dart';
 import 'package:fruit_shop/Feature/home/presentation/cubit/cart/cart_cubit.dart';
+import 'package:fruit_shop/generated/l10n.dart';
 
 import 'cart_items_list.dart';
 import 'custom_cart_button.dart';
@@ -26,7 +27,11 @@ class _CartViewBodyState extends State<CartViewBody> {
             SliverToBoxAdapter(
               child: Column(
                 children: [
-                  buildAppBar(title: 'السلة', context, backButton: false),
+                  buildAppBar(
+                    title: S.of(context).cart_title,
+                    context,
+                    backButton: false,
+                  ),
                   const SizedBox(height: 16),
                   Container(
                     padding: const EdgeInsets.symmetric(
@@ -39,7 +44,16 @@ class _CartViewBodyState extends State<CartViewBody> {
                     ),
                     child: Center(
                       child: Text(
-                        'لديك ${context.watch<CartCubit>().cartEntity.cartItems.length} منتجات في سله التسوق',
+                        // 'لديك ${context.watch<CartCubit>().cartEntity.cartItems.length} منتجات في سله التسوق',
+                        S
+                            .of(context)
+                            .cart_products_count(
+                              context
+                                  .watch<CartCubit>()
+                                  .cartEntity
+                                  .cartItems
+                                  .length,
+                            ),
                         style: AppTextStyles.bodySmallRegular13.copyWith(
                           color: AppColors.primaryColor,
                         ),

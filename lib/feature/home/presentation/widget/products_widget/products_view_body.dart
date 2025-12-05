@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruit_shop/core/cubit/products/products_cubit.dart';
+import 'package:fruit_shop/Feature/home/presentation/cubit/products_cubit/products_cubit.dart';
 import 'package:fruit_shop/Feature/home/presentation/widget/products_widget/custom_products_appbar.dart';
 import 'package:fruit_shop/Feature/home/presentation/widget/products_widget/products_grid_cubit.dart';
 import 'package:fruit_shop/Feature/home/presentation/widget/products_widget/products_header.dart';
@@ -24,7 +24,6 @@ class _ProductsViewBodyState extends State<ProductsViewBody> {
 
   @override
   Widget build(BuildContext context) {
-  
     return const Padding(
       padding: EdgeInsets.symmetric(horizontal: kHorizentalPadding),
       child: CustomScrollView(

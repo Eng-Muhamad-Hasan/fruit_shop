@@ -28,7 +28,7 @@ ShippingAddressModel({
     );
   }
 
-  toJson() {
+  Map<String, String?> toJson() {
     return {
       "name": name ,
       "email": email,

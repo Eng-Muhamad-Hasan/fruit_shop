@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_shop/core/shared/custom_text_form_field.dart';
 import 'package:fruit_shop/Feature/checkout/domain/entity/order_entity.dart';
+import 'package:fruit_shop/generated/l10n.dart';
 import 'package:provider/provider.dart';
 
 class AddressSection extends StatefulWidget {
@@ -13,7 +14,7 @@ class AddressSection extends StatefulWidget {
   final ValueNotifier<AutovalidateMode> autovalidatNotifier;
 
   @override
-  State<AddressSection> createState() => _AddressSectionState();
+  State<AddressSection>  createState() => _AddressSectionState();
 }
 
 class _AddressSectionState extends State<AddressSection>
@@ -35,28 +36,28 @@ class _AddressSectionState extends State<AddressSection>
                   onSaved: (value) {
                     context.read<OrderEntity>().shippingAddress.name = value;
                   },
-                  hintText: 'الاسم الكامل',
+                  hintText: S.of(context).checkout_address_field_name,
                   textInputType: TextInputType.text,
                 ),
                 CustomTextFormField(
                   onSaved: (value) {
                     context.read<OrderEntity>().shippingAddress.email = value;
                   },
-                  hintText: 'البريد الالكتروني',
+                  hintText: S.of(context).checkout_address_field_email,
                   textInputType: TextInputType.emailAddress,
                 ),
                 CustomTextFormField(
                   onSaved: (value) {
                     context.read<OrderEntity>().shippingAddress.city = value;
                   },
-                  hintText: 'المدينة',
+                  hintText: S.of(context).checkout_address_field_city,
                   textInputType: TextInputType.text,
                 ),
                 CustomTextFormField(
                   onSaved: (value) {
                     context.read<OrderEntity>().shippingAddress.address = value;
                   },
-                  hintText: 'العنوان',
+                  hintText: S.of(context).checkout_address_field_address,
                   textInputType: TextInputType.text,
                 ),
                 CustomTextFormField(
@@ -64,14 +65,16 @@ class _AddressSectionState extends State<AddressSection>
                     context.read<OrderEntity>().shippingAddress.addressDetails =
                         value;
                   },
-                  hintText: 'اسم الشارع,رقم الشقة , رقم الطابق ..',
+                  hintText: S
+                      .of(context)
+                      .checkout_address_field_address_details,
                   textInputType: TextInputType.text,
                 ),
                 CustomTextFormField(
                   onSaved: (value) {
                     context.read<OrderEntity>().shippingAddress.phone = value;
                   },
-                  hintText: 'رقم الهاتف',
+                  hintText: S.of(context).checkout_address_field_phone,
                   textInputType: TextInputType.phone,
                 ),
               ],
@@ -83,6 +86,5 @@ class _AddressSectionState extends State<AddressSection>
   }
 
   @override
-  // TODO: implement wantKeepAlive
   bool get wantKeepAlive => true;
 }

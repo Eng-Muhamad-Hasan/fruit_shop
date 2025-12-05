@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruit_shop/core/functions/show_log_snack_bar.dart';
 import 'package:fruit_shop/core/shared/custom_appbar_widget.dart';
+import 'package:fruit_shop/generated/l10n.dart';
 
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -13,7 +14,7 @@ class AiChatViewBody extends StatefulWidget {
   const AiChatViewBody({super.key});
 
   @override
-  State<AiChatViewBody> createState() => _AiChatViewBodyState();
+  State<AiChatViewBody>  createState() => _AiChatViewBodyState();
 }
 
 class _AiChatViewBodyState extends State<AiChatViewBody> {
@@ -57,7 +58,11 @@ class _AiChatViewBodyState extends State<AiChatViewBody> {
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Column(
             children: [
-              buildAppBar(context, title: 'المساعد الذكي', backButton: false),
+              buildAppBar(
+                context,
+                title: S.of(context).ai_chat_title,
+                backButton: false,
+              ),
               const SizedBox(height: 16),
               Expanded(
                 child: Stack(
@@ -86,7 +91,7 @@ class _AiChatViewBodyState extends State<AiChatViewBody> {
                                   decoration: InputDecoration(
                                     filled: true,
                                     fillColor: Colors.white,
-                                    hintText: 'اكتب رسالة هنا',
+                                    hintText: S.of(context).ai_chat_hint,
                                     hintStyle: const TextStyle(
                                       color: AppColors.gray500,
                                     ),

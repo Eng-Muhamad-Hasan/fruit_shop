@@ -19,8 +19,9 @@ AppBar buildAppBar(
     leading: Visibility(
       visible: backButton,
       child: IconButton(
-        onPressed: () {
-          if ((Navigator.of(context).maybePop()) == false) {
+        onPressed: () async {
+          final didPop = await Navigator.of(context).maybePop();
+          if (!didPop) {
             if (exitOnRoot) {
               SystemNavigator.pop();
             }

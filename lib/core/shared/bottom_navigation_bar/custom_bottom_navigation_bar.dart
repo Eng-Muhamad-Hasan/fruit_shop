@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_shop/Feature/home/domain/entity/bottom_navigation_bar_entity.dart';
+import 'package:fruit_shop/core/utils/app_assets.dart';
+import 'package:fruit_shop/generated/l10n.dart';
 import 'bottom_navigation_bar_item.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
@@ -12,7 +14,7 @@ class CustomBottomNavigationBar extends StatefulWidget {
   final ValueChanged<int> onTap;
 
   @override
-  State<CustomBottomNavigationBar> createState() =>
+  State<CustomBottomNavigationBar>  createState() =>
       _CustomBottomNavigationBarState();
 }
 
@@ -58,5 +60,35 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         }).toList(),
       ),
     );
+  }
+
+  List<BottomNavigationBarEntity> get getBottomNavigationBarEntityList {
+    return [
+      BottomNavigationBarEntity(
+        name: S.of(context).home_navigation_bar,
+        activeImage: Assets.imagesHomeFill,
+        inActiveImage: Assets.imagesHomeOut,
+      ),
+      BottomNavigationBarEntity(
+        name: S.of(context).products_navigation_bar,
+        activeImage: Assets.imagesProductsFill,
+        inActiveImage: Assets.imagesProductsOut,
+      ),
+      BottomNavigationBarEntity(
+        name: S.of(context).cart_navigation_bar,
+        activeImage: Assets.imagesCartFill,
+        inActiveImage: Assets.imagesCartOut,
+      ),
+      BottomNavigationBarEntity(
+        name: S.of(context).ai_assistant_navigation_bar,
+        activeImage: Assets.imagesStarsFill,
+        inActiveImage: Assets.imagesStarsOut,
+      ),
+      BottomNavigationBarEntity(
+        name: S.of(context).profile_navigation_bar,
+        activeImage: Assets.imagesUserFill,
+        inActiveImage: Assets.imagesUserOut,
+      ),
+    ];
   }
 }

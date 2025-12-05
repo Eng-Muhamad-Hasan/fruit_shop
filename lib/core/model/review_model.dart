@@ -44,7 +44,7 @@ ReviewEntity toEntity() => ReviewEntity(
   date: date,
 );
 
-  toJson() {
+  Map<String, Object> toJson() {
     return {
       'userName': userName,
       'image': image,

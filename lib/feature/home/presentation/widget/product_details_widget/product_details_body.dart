@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fruit_shop/generated/l10n.dart';
 
 import '../../../../../core/constants/constants.dart';
 import '../../../../../core/functions/show_log_snack_bar.dart';
@@ -22,7 +23,6 @@ class ProductDetailsBody extends StatelessWidget {
 
   final CartItemEntity cartItemEntity;
   final ValueNotifier<int> valueNotifier;
-
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -98,7 +98,7 @@ class ProductDetailsBody extends StatelessWidget {
                             children: [
                               TextSpan(
                                 text:
-                                    '${cartItemEntity.productEntity.price} دولار ',
+                                    '${cartItemEntity.productEntity.price} ${S.of(context).dollar} ',
                                 style: AppTextStyles.bodyXSmallBold13.copyWith(
                                   color: AppColors.orange500,
                                 ),
@@ -111,7 +111,7 @@ class ProductDetailsBody extends StatelessWidget {
                               ),
 
                               TextSpan(
-                                text: ' الكيلو',
+                                text: S.of(context).kilogram,
                                 style: AppTextStyles.bodySemiBold13.copyWith(
                                   color: AppColors.orange400,
                                 ),
@@ -182,7 +182,7 @@ class ProductDetailsBody extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'المراجعة',
+                      S.of(context).review_button,
                       style: AppTextStyles.bodyXSmallBold13.copyWith(
                         color: AppColors.primaryColor,
                         decoration: TextDecoration.underline,
@@ -204,13 +204,13 @@ class ProductDetailsBody extends StatelessWidget {
                   spacing: 16,
                   children: [
                     ProductDetailsCard(
-                      title: 'الصلاحية',
+                      title: S.of(context).expiration,
                       subtitle:
-                          '${cartItemEntity.productEntity.expirationMonths}/شهر',
+                          '${cartItemEntity.productEntity.expirationMonths} - ${S.of(context).months}',
                       svgImage: Assets.imagesCalendar,
                     ),
-                    const ProductDetailsCard(
-                      title: 'اورغانيك',
+                    ProductDetailsCard(
+                      title: S.of(context).organic,
                       subtitle: '100%',
                       svgImage: Assets.imagesLotus,
                     ),
@@ -222,13 +222,13 @@ class ProductDetailsBody extends StatelessWidget {
                   spacing: 16,
                   children: [
                     ProductDetailsCard(
-                      title: ' كالوري',
+                      title: S.of(context).calory,
                       subtitle:
-                          '${cartItemEntity.productEntity.numberOfCalories}/كيلو ',
+                          '${cartItemEntity.productEntity.numberOfCalories}/${S.of(context).kilogram} ',
                       svgImage: Assets.imagesFlame,
                     ),
                     ProductDetailsCard(
-                      title: 'المبيعات',
+                      title: S.of(context).sellings,
                       subtitle: '${cartItemEntity.productEntity.sellingCount} ',
                       svgImage: Assets.imagesReviewStar,
                     ),
@@ -250,7 +250,7 @@ class ProductDetailsBody extends StatelessWidget {
                       );
                     }
                   },
-                  textButton: 'أضف إلى السلة',
+                  textButton: S.of(context).add_to_cart_button,
                 ),
               ],
             ),

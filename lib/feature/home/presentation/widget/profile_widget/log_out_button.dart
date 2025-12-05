@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fruit_shop/generated/l10n.dart';
 
 import '../../../../../core/utils/app_assets.dart';
 import '../../../../../core/utils/app_colors.dart';
@@ -28,7 +29,7 @@ class _LogOutButtonState extends State<LogOutButton> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              'تسجيل الخروج',
+              S.of(context).profile_log_out_button,
               style: AppTextStyles.bodySemiBold13.copyWith(
                 color: AppColors.primaryColor,
               ),

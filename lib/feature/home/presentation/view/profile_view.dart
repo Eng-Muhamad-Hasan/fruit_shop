@@ -1,13 +1,16 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruit_shop/Feature/home/presentation/cubit/profile-cubit/change_language_cubit.dart';
 import 'package:fruit_shop/core/constants/constants.dart';
+import 'package:fruit_shop/core/functions/show_language_dialog.dart';
 import 'package:fruit_shop/core/shared/custom_appbar_widget.dart';
 import 'package:fruit_shop/core/utils/app_colors.dart';
 import 'package:fruit_shop/core/utils/app_text_styles.dart';
+import 'package:fruit_shop/generated/l10n.dart';
 
 import '../../../../core/utils/app_assets.dart';
 import '../widget/profile_widget/log_out_button.dart';
+import '../widget/profile_widget/profile_header.dart';
 import '../widget/profile_widget/profile_item.dart';
 
 class ProfileView extends StatelessWidget {
@@ -23,112 +26,78 @@ class ProfileView extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              buildAppBar(context, title: 'حسابي', backButton: false),
-              const SizedBox(height: 16),
-              ListTile(
-                contentPadding: EdgeInsets.zero,
-                leading: Stack(
-                  clipBehavior: Clip.none,
-                  children: [
-                    Container(
-                      width: 73,
-                      height: 73,
-                      decoration: const ShapeDecoration(
-                        image: DecorationImage(
-                          image: CachedNetworkImageProvider(
-                            "https://www.bing.com/th?id=OSB.UdgSa%7C9np6TDQZ8JFqen3A--.png&pid=MSports&w=72&h=72&qlt=90&c=0&rs=1&dpr=1&p=1",
-                          ),
-                          fit: BoxFit.contain,
-                        ),
-                        shape: CircleBorder(),
-                      ),
-                    ),
-                    Positioned(
-                      bottom: -16,
-                      right: 0,
-                      left: 0,
-                      child: Container(
-                        height: 32,
-                        width: 32,
-                        padding: const EdgeInsets.all(6),
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Color(0xffF9F9F9),
-                        ),
-                        child: SvgPicture.asset(Assets.imagesCamera),
-                      ),
-                    ),
-                  ],
-                ),
-                title: Text(
-                  'محمد حسن',
-                  style: AppTextStyles.bodyXSmallBold13.copyWith(
-                    color: const Color(0xFF131F46),
-                  ),
-                ),
-                subtitle: Text(
-                  'mhmd-hsn@Gmail.com',
-                  style: AppTextStyles.bodySmallRegular13.copyWith(
-                    color: const Color(0xFF888FA0),
-                  ),
-                ),
+              buildAppBar(
+                context,
+                title: S.of(context).profile_title,
+                backButton: false,
               ),
               const SizedBox(height: 16),
+              const ProfileHeader(),
+              const SizedBox(height: 16),
               Text(
-                'عام',
+                S.of(context).profile_header_section,
                 style: AppTextStyles.bodySemiBold13.copyWith(
                   color: AppColors.gray950,
                 ),
               ),
               const SizedBox(height: 16),
-              const ProfileItem(
-                title: 'الملف الشخصي',
+              ProfileItem(
+                title: S.of(context).profile_personal_file,
                 svgIcon: Assets.imagesPersonalIcon,
               ),
               const Divider(height: 10, color: Color(0xFFD8D8D8)),
-              const ProfileItem(
-                title: 'طلباتي',
+              ProfileItem(
+                title: S.of(context).profile_my_orders,
                 svgIcon: Assets.imagesMyOrders,
               ),
               const Divider(height: 10, color: Color(0xFFD8D8D8)),
-              const ProfileItem(
-                title: 'المدفوعات',
+              ProfileItem(
+                title: S.of(context).profile_my_payments,
                 svgIcon: Assets.imagesPayments,
               ),
               const Divider(height: 10, color: Color(0xFFD8D8D8)),
-              const ProfileItem(
-                title: 'المفضلة',
+              ProfileItem(
+                title: S.of(context).profile_my_favorites,
                 svgIcon: Assets.imagesFavoriteList,
               ),
               const Divider(height: 10, color: Color(0xFFD8D8D8)),
-              const ProfileItem(
-                title: 'الإشعارات',
+              ProfileItem(
+                title: S.of(context).profile_my_notifications,
                 svgIcon: Assets.imagesNotificationOption,
                 isSwitch: true,
               ),
               const Divider(height: 10, color: Color(0xFFD8D8D8)),
-              const ProfileItem(
-                title: 'اللغة',
+              ProfileItem(
+                title: S.of(context).profile_language,
                 svgIcon: Assets.imagesLangOption,
                 isText: true,
+                onTap: () async {
+                  String? selectedLanguage = await showLanguageDialog(context);
+                  if (selectedLanguage != null && context.mounted) {
+                    // ignore: use_build_context_synchronously
+                    context.read<ChangeLanguageCubit>().toggleLanguage(
+                      Locale(selectedLanguage),
+                    );
+                  }
+                },
               ),
               const Divider(height: 10, color: Color(0xFFD8D8D8)),
-              const ProfileItem(
-                title: 'المظهر',
+              ProfileItem(
+                title: S.of(context).profile_theme,
                 svgIcon: Assets.imagesThemeOption,
                 isSwitch: true,
               ),
               const Divider(height: 10, color: Color(0xFFD8D8D8)),
               const SizedBox(height: 16),
               Text(
-                'المساعدة',
+                S.of(context).profile_help,
                 style: AppTextStyles.bodySemiBold13.copyWith(
                   color: AppColors.gray950,
                 ),
               ),
               const SizedBox(height: 8),
-              const ProfileItem(
-                title: 'من نحن ؟',
+              ProfileItem(
+                title: S.of(context).profile_about_us,
                 svgIcon: Assets.imagesAboutUs,
               ),
             ],

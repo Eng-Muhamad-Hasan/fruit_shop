@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_shop/Feature/checkout/presentation/widget/checkout_payment/address_card.dart';
-
+import 'package:fruit_shop/generated/l10n.dart';
 
 import '../../../domain/entity/order_entity.dart';
 import 'payment_item.dart';
@@ -13,24 +13,22 @@ class PaymentSection extends StatelessWidget {
   final PageController pageController;
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       spacing: 16,
       children: [
-        const PaymentItemBox(
-          title: 'ملخص الطلب :',
-          paymentItem: PaymentItem(child: PaymentSummary()),
-        ),
-    
-      if(context.read<OrderEntity>().payWithCash!)
         PaymentItemBox(
-          title: 'عنوان التوصيل :',
-          paymentItem: PaymentItem(child: AddressCard(pageController: pageController,),
-          ),
+          title: S.of(context).checkout_payment_summary,
+          paymentItem: const PaymentItem(child: PaymentSummary()),
         ),
-    
 
+        if (context.read<OrderEntity>().payWithCash!)
+          PaymentItemBox(
+            title: S.of(context).checkout_payment_address,
+            paymentItem: PaymentItem(
+              child: AddressCard(pageController: pageController),
+            ),
+          ),
       ],
     );
   }
 }
-
