@@ -19,9 +19,6 @@ Designed with a **modern mobile shopping experience**, Fruit Shop delivers a smo
 
 ## 📸 Demo Screenshots
 
-Below your screenshots are presented in a 2×2 grid for a clear preview.  
-Place these images in `assets/screenshots/` with the filenames shown.
-
 <table>
   <tr>
     <td align="center">
