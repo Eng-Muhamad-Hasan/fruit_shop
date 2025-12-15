@@ -74,7 +74,7 @@ Powered by **Google Generative AI**, the assistant is designed to be **context-a
 ## 🧩 Features
 
 - Smooth, responsive mobile-focused UI  
-- Scalable state management using modern patterns (Provider, Bloc/Cubit, GetX optional)  
+- Scalable state management using modern patterns (Provider, Bloc/Cubit)  
 - Real-time data handling and authentication  
 - Clean, modular codebase ready for testing and CI  
 - Easy integration with payment gateways and backend APIs
@@ -86,7 +86,7 @@ Powered by **Google Generative AI**, the assistant is designed to be **context-a
 The app follows a **clean and scalable architecture**:
 
 - **Presentation Layer:** Flutter Widgets  
-- **State Management:** Provider & Bloc (Cubit) — extendable with GetX or other patterns  
+- **State Management:** Provider & Bloc (Cubit)  
 - **Data Layer:** Firebase Firestore & Supabase Storage  
 - **AI Layer:** Google Generative AI  
 
