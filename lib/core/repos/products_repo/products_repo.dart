@@ -6,7 +6,8 @@ abstract class ProductsRepo {
   Future<Either<Failure, List<ProductEntity>>> getProducts();
   Future<Either<Failure, List<ProductEntity>>> getBestSellingProducts();
   Future<Either<Failure, List<ProductEntity>>> getAlphabetFilterProducts();
-  Future<Either<Failure, List<ProductEntity>>> getAscendingPriceFilterProducts();
-  Future<Either<Failure, List<ProductEntity>>> getDescendingPriceFilterProducts();
-
+  Future<Either<Failure, List<ProductEntity>>>
+  getAscendingPriceFilterProducts();
+  Future<Either<Failure, List<ProductEntity>>>
+  getDescendingPriceFilterProducts();
 }

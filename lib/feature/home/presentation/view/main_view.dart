@@ -18,6 +18,7 @@ class _MainViewState extends State<MainView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       bottomNavigationBar: CustomBottomNavigationBar(
         currentIndex: currentValueIndex,
         onTap: (index) => setState(() {

@@ -4,6 +4,7 @@ import 'package:fruit_shop/core/functions/fetch_user_data.dart';
 import 'package:fruit_shop/core/utils/app_assets.dart';
 import 'package:fruit_shop/core/utils/app_colors.dart';
 import 'package:fruit_shop/core/utils/app_text_styles.dart';
+import 'package:fruit_shop/generated/l10n.dart';
 
 class CustomHomeAppBar extends StatelessWidget {
   const CustomHomeAppBar({super.key});
@@ -11,9 +12,14 @@ class CustomHomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: Image.asset(Assets.imagesProfileAvatar, fit: BoxFit.contain),
+      leading:
+          //  SvgPicture.asset(
+          //   Assets.imagesProfileAvatar,
+          //   fit: BoxFit.contain,
+          // ),
+          Image.asset(Assets.imagesProfileAvatar, fit: BoxFit.contain),
       title: Text(
-        'صباح الخير !..',
+        S.of(context).home_welcome_message,
         style: AppTextStyles.bodyBaseRegular16.copyWith(
           color: AppColors.gray400,
         ),

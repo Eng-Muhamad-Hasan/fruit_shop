@@ -9,7 +9,7 @@ import 'package:fruit_shop/core/repos/products_repo/products_repo.dart';
 import 'package:fruit_shop/core/services/bloc_observer.dart';
 import 'package:fruit_shop/core/services/get_it_service.dart';
 import 'package:fruit_shop/core/services/shared_preferences_singleton.dart';
-import 'package:fruit_shop/core/utils/app_colors.dart';
+import 'package:fruit_shop/core/themes/original_theme.dart';
 import 'package:fruit_shop/Feature/splash/presentation/view/splash_view.dart';
 import 'package:fruit_shop/core/utils/get_initial_app_settings.dart';
 import 'package:fruit_shop/firebase_options.dart';
@@ -43,14 +43,7 @@ class MyApp extends StatelessWidget {
       child: BlocBuilder<ChangeLanguageCubit, Locale>(
         builder: (context, languageState) {
           return MaterialApp(
-            theme: ThemeData(
-              fontFamily: "Cairo",
-              appBarTheme: const AppBarTheme(backgroundColor: Colors.white),
-              scaffoldBackgroundColor: Colors.white,
-              colorScheme: ColorScheme.fromSeed(
-                seedColor: AppColors.primaryColor,
-              ),
-            ),
+            theme: originalTheme,
             localizationsDelegates: const [
               S.delegate,
               GlobalMaterialLocalizations.delegate,

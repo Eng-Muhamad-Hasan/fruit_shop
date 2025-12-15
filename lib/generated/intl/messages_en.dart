@@ -118,6 +118,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "home_most_selling": MessageLookupByLibrary.simpleMessage("Most Selling"),
     "home_navigation_bar": MessageLookupByLibrary.simpleMessage("Home"),
     "home_search_hint": MessageLookupByLibrary.simpleMessage("Search ..."),
+    "home_welcome_message": MessageLookupByLibrary.simpleMessage(
+      "Good morning! ..",
+    ),
     "kilogram": MessageLookupByLibrary.simpleMessage("Kilogram"),
     "months": MessageLookupByLibrary.simpleMessage("Months"),
     "organic": MessageLookupByLibrary.simpleMessage("Organic"),

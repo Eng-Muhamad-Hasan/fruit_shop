@@ -26,7 +26,7 @@ class DefaultChatSessionProvider implements ChatSessionProvider {
     _model ??
         gga.GenerativeModel(
           apiKey: googleGenerativeAiKey,
-          model: 'gemini-2.0-flash',
+          model: 'gemini-2.5-flash-lite',
         ),
   );
 }

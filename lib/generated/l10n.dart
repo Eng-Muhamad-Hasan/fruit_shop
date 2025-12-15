@@ -164,6 +164,16 @@ class S {
     return Intl.message('Calory', name: 'calory', desc: '', args: []);
   }
 
+  /// `Good morning! ..`
+  String get home_welcome_message {
+    return Intl.message(
+      'Good morning! ..',
+      name: 'home_welcome_message',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Search ...`
   String get home_search_hint {
     return Intl.message(

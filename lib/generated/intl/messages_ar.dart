@@ -114,6 +114,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "home_most_selling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعاً"),
     "home_navigation_bar": MessageLookupByLibrary.simpleMessage("الرئيسية"),
     "home_search_hint": MessageLookupByLibrary.simpleMessage("ابحث عن ..."),
+    "home_welcome_message": MessageLookupByLibrary.simpleMessage(
+      " صباح الخير ! ..",
+    ),
     "kilogram": MessageLookupByLibrary.simpleMessage("كيلوغرام"),
     "months": MessageLookupByLibrary.simpleMessage("أشهر"),
     "organic": MessageLookupByLibrary.simpleMessage("أورغانيك"),
